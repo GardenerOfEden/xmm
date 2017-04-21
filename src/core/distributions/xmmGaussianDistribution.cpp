@@ -715,3 +715,6 @@ xmm::GaussianDistribution::CovarianceMode
 xmm::Attribute<xmm::GaussianDistribution::CovarianceMode>::defaultLimitMax() {
     return xmm::GaussianDistribution::CovarianceMode::Diagonal;
 }
+
+// Explicit instantiation of template to ensure specialisation of defaultLimitMax is generated
+template class xmm::Attribute<xmm::GaussianDistribution::CovarianceMode>;

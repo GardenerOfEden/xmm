@@ -180,6 +180,9 @@ xmm::Attribute<xmm::HMM::TransitionMode>::defaultLimitMax() {
     return xmm::HMM::TransitionMode::LeftRight;
 }
 
+// Explicit instantiation of template to ensure specialisation of defaultLimitMax is generated
+template class xmm::Attribute<xmm::HMM::TransitionMode>;
+
 template <>
 void xmm::checkLimits<xmm::HMM::RegressionEstimator>(
     xmm::HMM::RegressionEstimator const& value,
@@ -197,3 +200,6 @@ xmm::HMM::RegressionEstimator
 xmm::Attribute<xmm::HMM::RegressionEstimator>::defaultLimitMax() {
     return xmm::HMM::RegressionEstimator::Likeliest;
 }
+
+// Explicit instantiation of template to ensure specialisation of defaultLimitMax is generated
+template class xmm::Attribute<xmm::HMM::RegressionEstimator>;
