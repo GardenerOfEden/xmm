@@ -91,13 +91,14 @@ add_custom_command(OUTPUT xmm_doc.i
 set(CMAKE_SWIG_FLAGS "")
 set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/src/numpy.i PROPERTIES CPLUSPLUS ON)
 set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/src/xmm.i PROPERTIES CPLUSPLUS ON)
-set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/src/xmm.i PROPERTIES SWIG_FLAGS "-DUSE_PTHREAD")
+# set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/src/xmm.i PROPERTIES SWIG_FLAGS "-DUSE_PTHREAD")
 SET(SWIG_MODULE_xmm_EXTRA_DEPS 
     xmm_doc.i
 )
 # set(CMAKE_SWIG_OUTDIR ${CMAKE_CURRENT_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE}/xmm)
 SWIG_ADD_MODULE(xmm python ${CMAKE_CURRENT_SOURCE_DIR}/src/xmm.i)
-SWIG_LINK_LIBRARIES(xmm ${PYTHON_LIBRARIES} xmm pthread)
+SWIG_LINK_LIBRARIES(xmm ${PYTHON_LIBRARIES} xmm)
+# SWIG_LINK_LIBRARIES(xmm ${PYTHON_LIBRARIES} xmm pthread)
 
 add_custom_command(TARGET _xmm POST_BUILD COMMAND sh ${CMAKE_CURRENT_SOURCE_DIR}/src/move_files.sh)
 

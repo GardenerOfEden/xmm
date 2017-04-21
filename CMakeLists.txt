@@ -41,7 +41,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/models/hmm)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/models/kmeans)
 
 set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
-add_definitions(-DUSE_PTHREAD)
+# add_definitions(-DUSE_PTHREAD)
 
 file(
     GLOB_RECURSE
