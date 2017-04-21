@@ -82,7 +82,7 @@ class GaussianDistribution : public Writable {
     /**
      @brief Covariance Mode
      */
-    enum class CovarianceMode {
+    enum CovarianceMode {
         /**
          @brief Full covariance
          */

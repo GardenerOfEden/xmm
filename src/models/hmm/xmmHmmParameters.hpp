@@ -45,7 +45,7 @@ class HMM {
     /**
      @brief Type of Transition Matrix
      */
-    enum class TransitionMode {
+    enum TransitionMode {
         /**
          @brief Ergodic Transition Matrix
          */
@@ -63,7 +63,7 @@ class HMM {
      @enum RegressionEstimator
      @brief Estimator for the regression with HMMs
      */
-    enum class RegressionEstimator {
+    enum RegressionEstimator {
         /**
          @brief The output is estimated by a weighted regression over all states
          */
