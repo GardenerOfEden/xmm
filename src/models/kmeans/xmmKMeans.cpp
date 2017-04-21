@@ -33,7 +33,7 @@
 #include "xmmKMeans.hpp"
 #include <limits>
 
-#ifdef WIN32
+#if defined(WIN32) || defined(_WIN64)
 static long random() { return rand(); }
 #endif
 #define kmax(a, b) (((a) > (b)) ? (a) : (b))
